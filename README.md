@@ -26,6 +26,7 @@ Save the script as network_manager.py in your home directory or another location
 
 ```
 git clone https://github.com/mokhutsoane/Useful-Raspberry-pi-scripts.git
+cd Useful-Raspberry-pi-scripts
 
 ```
 
@@ -34,7 +35,7 @@ git clone https://github.com/mokhutsoane/Useful-Raspberry-pi-scripts.git
 Run the following command to make the script executable:
 
 ```
-chmod +x ~/network_manager.py
+chmod +x pi_network_manager.py
 
 ```
 
@@ -52,11 +53,11 @@ crontab -e
 Add the following line to run the script every 5 minutes:
 
 ```
-*/5 * * * * /home/pi/network_manager.py >> /home/pi/network_manager.log 2>&1
+*/5 * * * * python3 /home/pi/Useful-Raspberry-pi-scripts/pi_network_manager.py >> /home/pi/Useful-Raspberry-pi-scripts/network_manager.log 2>&1
 
 ```
 
-Replace /home/pi/ with the path where you saved the script if different.
+Replace /home/pi/Useful-Raspberry-pi-scripts with the path where you saved the script if different.
 
 ## Contributions
 
