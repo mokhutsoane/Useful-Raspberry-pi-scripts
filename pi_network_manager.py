@@ -5,9 +5,6 @@ import subprocess
 import time
 from datetime import datetime
 
-restarts_log = "restarts.log"
-reboots_log = "reboots.log"
-
 hosts_to_check = ["linphone.org", "google.com", "8.8.8.8"]
 
 
@@ -48,8 +45,6 @@ def reboot_system():
 
 def main():
     print(datetime.now())
-    remove_log_file(restarts_log)
-    remove_log_file(reboots_log)
 
     for attempt in range(3):
         if is_network_connected():
